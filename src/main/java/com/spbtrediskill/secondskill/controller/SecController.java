@@ -34,7 +34,6 @@ public class SecController {
     @PostMapping( value = "/sec",produces = "application/json;charset=utf-8")
     @ResponseBody
     public String sec(@RequestParam(value = "username") String username, @RequestParam(value = "stockName") String stockName) {
-
         log.info("参加秒杀的用户是：{}，秒杀的商品是：{}", username, stockName);
         String message = null;
         //调用redis给相应商品库存量减一
